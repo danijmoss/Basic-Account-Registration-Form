@@ -54,18 +54,29 @@ a:hover {
 
 .form {
   display: grid;
-  // grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(8, auto);
-  grid-template-areas: "heading";
-  grid-gap: 20px;
+  grid-template-areas:
+    "heading heading"
+    "subheading subheading"
+    "firstName lastName"
+    "email email"
+    "password password"
+    "finePrint finePrint"
+    "button button"
+    "login login";
+  justify-items: stretch;
 
   &__heading {
     grid-area: heading;
     justify-self: center;
+    margin-bottom: 0.2rem;
   }
 
   &__subheading {
     grid-area: subheading;
+    justify-self: center;
+    margin-top: 0.2rem;
   }
 
   &__firstName {

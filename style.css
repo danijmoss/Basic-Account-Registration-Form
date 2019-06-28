@@ -62,49 +62,78 @@ a:hover {
 .form {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
   -ms-grid-rows: (auto)[8];
       grid-template-rows: repeat(8, auto);
-      grid-template-areas: "heading";
-  grid-gap: 20px;
+      grid-template-areas: "heading heading" "subheading subheading" "firstName lastName" "email email" "password password" "finePrint finePrint" "button button" "login login";
+  justify-items: stretch;
 }
 
 .form__heading {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: heading;
   -ms-grid-column-align: center;
       justify-self: center;
+  margin-bottom: 0.2rem;
 }
 
 .form__subheading {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: subheading;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 0.2rem;
 }
 
 .form__firstName {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: firstName;
 }
 
 .form__lastName {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: lastName;
 }
 
 .form__email {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: email;
 }
 
 .form__password {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: password;
 }
 
 .form__finePrint {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: finePrint;
 }
 
 .form__signUp-btn {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: button;
 }
 
 .form__login-text {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: login;
 }
 
