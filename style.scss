@@ -83,4 +83,25 @@ a:hover {
     list-style: none;
     justify-items: center;
   }
+
+  &__credit {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: 1fr;
+    grid-template-areas: "copyright design background";
+    justify-items: center;
+    grid-gap: 20px;
+  }
+
+  &__copyright {
+    grid-area: copyright;
+  }
+
+  &__design-credit {
+    grid-area: design;
+  }
+
+  &__background-img {
+    grid-area: background;
+  }
 }

@@ -84,4 +84,34 @@ a:hover {
   list-style: none;
   justify-items: center;
 }
+
+.footer__credit {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "copyright design background";
+  justify-items: center;
+  grid-gap: 20px;
+}
+
+.footer__copyright {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: copyright;
+}
+
+.footer__design-credit {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: design;
+}
+
+.footer__background-img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: background;
+}
 /*# sourceMappingURL=style.css.map */
