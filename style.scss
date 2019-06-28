@@ -53,23 +53,47 @@ a:hover {
 }
 
 .form {
-  //   display: grid;
-  //   grid-template-columns: repeat(2, auto);
-  //   grid-template-rows: repeat(2, auto), 1fr, 1fr, repeat(5, auto);
-  //   grid-template-areas:
-  //     "heading"
-  //     "subheading"
-  //     "firstName lastName"
-  //     "email"
-  //     "password"
-  //     "finePrint"
-  //     "button"
-  //     "login";
+  display: grid;
+  // grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(8, auto);
+  grid-template-areas: "heading";
+  grid-gap: 20px;
 
   &__heading {
     grid-area: heading;
     justify-self: center;
-    align-self: center;
+  }
+
+  &__subheading {
+    grid-area: subheading;
+  }
+
+  &__firstName {
+    grid-area: firstName;
+  }
+
+  &__lastName {
+    grid-area: lastName;
+  }
+
+  &__email {
+    grid-area: email;
+  }
+
+  &__password {
+    grid-area: password;
+  }
+
+  &__finePrint {
+    grid-area: finePrint;
+  }
+
+  &__signUp-btn {
+    grid-area: button;
+  }
+
+  &__login-text {
+    grid-area: login;
   }
 }
 

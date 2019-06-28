@@ -59,13 +59,53 @@ a:hover {
   grid-area: form;
 }
 
+.form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[8];
+      grid-template-rows: repeat(8, auto);
+      grid-template-areas: "heading";
+  grid-gap: 20px;
+}
+
 .form__heading {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: heading;
   -ms-grid-column-align: center;
       justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+}
+
+.form__subheading {
+  grid-area: subheading;
+}
+
+.form__firstName {
+  grid-area: firstName;
+}
+
+.form__lastName {
+  grid-area: lastName;
+}
+
+.form__email {
+  grid-area: email;
+}
+
+.form__password {
+  grid-area: password;
+}
+
+.form__finePrint {
+  grid-area: finePrint;
+}
+
+.form__signUp-btn {
+  grid-area: button;
+}
+
+.form__login-text {
+  grid-area: login;
 }
 
 .footer {
