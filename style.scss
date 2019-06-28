@@ -44,8 +44,7 @@ a:hover {
 .logo {
   grid-area: logo;
   justify-self: center;
-  align-self: center;
-  padding: 1rem;
+  padding: 2.5rem;
 }
 
 .form-container {
@@ -81,35 +80,56 @@ a:hover {
 
   &__firstName {
     grid-area: firstName;
+    margin: 0.5rem 1rem 0.5rem 20rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
   }
 
   &__lastName {
     grid-area: lastName;
+    margin: 0.5rem 20rem 0.5rem 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
   }
 
   &__email {
     grid-area: email;
+    margin: 0.5rem 20rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
   }
 
   &__password {
     grid-area: password;
+    margin: 0.5rem 20rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
   }
 
   &__finePrint {
     grid-area: finePrint;
+    justify-self: center;
+    margin: 0.5rem 20rem;
   }
 
   &__signUp-btn {
     grid-area: button;
+    margin: 0.5rem 30rem;
+    padding: 1.3rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
   }
 
   &__login-text {
     grid-area: login;
+    justify-self: center;
   }
 }
 
 .footer {
   grid-area: footer;
+  margin: 0 15rem;
+  font-size: 0.8rem;
 
   &__links {
     display: grid;

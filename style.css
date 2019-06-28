@@ -47,10 +47,7 @@ a:hover {
   grid-area: logo;
   -ms-grid-column-align: center;
       justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding: 1rem;
+  padding: 2.5rem;
 }
 
 .form-container {
@@ -94,12 +91,18 @@ a:hover {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: firstName;
+  margin: 0.5rem 1rem 0.5rem 20rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .form__lastName {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: lastName;
+  margin: 0.5rem 20rem 0.5rem 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .form__email {
@@ -107,6 +110,9 @@ a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: email;
+  margin: 0.5rem 20rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .form__password {
@@ -114,6 +120,9 @@ a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: password;
+  margin: 0.5rem 20rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .form__finePrint {
@@ -121,6 +130,9 @@ a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: finePrint;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0.5rem 20rem;
 }
 
 .form__signUp-btn {
@@ -128,6 +140,10 @@ a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: button;
+  margin: 0.5rem 30rem;
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .form__login-text {
@@ -135,12 +151,16 @@ a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: login;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .footer {
   -ms-grid-row: 4;
   -ms-grid-column: 2;
   grid-area: footer;
+  margin: 0 15rem;
+  font-size: 0.8rem;
 }
 
 .footer__links {
