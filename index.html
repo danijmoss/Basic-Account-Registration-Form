@@ -12,20 +12,19 @@
   </head>
   <body>
     <div class="container">
-      <!-- Site Logo -->
-      <div class="logo">
-        <i
-          aria-hidden="true"
-          class="far fa-car-building fa-3x"
-          title="City Co-Working"
-        ></i>
-        <span class="sr-only">City Co-Working</span>
-      </div>
-      <!-- End Site Logo -->
-
       <!-- Form Container -->
       <div class="form-container">
         <form class="form">
+          <!-- Site Logo -->
+          <div class="logo">
+            <i
+              aria-hidden="true"
+              class="far fa-car-building fa-3x"
+              title="City Co-Working"
+            ></i>
+            <span class="sr-only">City Co-Working</span>
+          </div>
+          <!-- End Site Logo -->
           <h1 class="form__heading">Let's create your account</h1>
 
           <p class="form__subheading">
@@ -35,18 +34,34 @@
           <label for="firstName" class="form__firstName-label sr-only"
             >First Name</label
           >
-          <input type="text" class="form__firstName" placeholder="First Name" />
+          <input
+            type="text"
+            class="form__firstName"
+            placeholder="First Name"
+            required
+            aria-required="true"
+            pattern="[^0-9]+"
+          />
 
           <label for="lastName" class="form__lastName-label sr-only"
             >Last Name</label
           >
-          <input type="text" class="form__lastName" placeholder="Last Name" />
+          <input
+            type="text"
+            class="form__lastName"
+            placeholder="Last Name"
+            required
+            aria-required="true"
+            pattern="[^0-9]+"
+          />
 
           <label for="email" class="form__email-label sr-only">Email</label>
           <input
             class="form__email"
             type="email"
             placeholder="Email eg: example@email.com"
+            required
+            aria-required="true"
           />
 
           <label for="password" class="form__password-label sr-only"
@@ -56,6 +71,8 @@
             type="password"
             class="form__password"
             placeholder="Password"
+            required
+            aria-required="true"
           /><span class="form__password-toggle"></span>
 
           <p class="form__finePrint">

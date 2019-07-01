@@ -1,15 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 body {
   font-family: "Open Sans", sans-serif;
+  background-image: url(images/office-workers.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 a:link,
 a:active {
   text-decoration: none;
+  color: #fff;
 }
 
 a:visited {
   text-decoration: none;
+  color: #fff;
 }
 
 a:hover {
@@ -34,41 +39,45 @@ a:hover {
       grid-template-columns: repeat(3, auto);
   -ms-grid-rows: auto, 3fr, auto;
       grid-template-rows: auto, 3fr, auto;
-  grid-gap: 100px;
-      grid-template-areas: "logo . ." ".  form . " ". . ." ". footer .";
+  grid-gap: 5px;
+      grid-template-areas: "form" "footer";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
+.form-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: form;
+  margin: 5rem 0 10rem 0;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+}
+
 .logo {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: logo;
-  -ms-grid-column-align: center;
       justify-self: center;
-  padding: 2.5rem;
-}
-
-.form-container {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: form;
+  padding: 1rem;
 }
 
 .form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[2];
-      grid-template-columns: repeat(2, auto);
-  -ms-grid-rows: (auto)[8];
-      grid-template-rows: repeat(8, auto);
-      grid-template-areas: "heading heading" "subheading subheading" "firstName lastName" "email email" "password password" "finePrint finePrint" "button button" "login login";
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8, 1fr);
+      grid-template-areas: "logo logo" "heading heading" "subheading subheading" "firstName lastName" "email email" "password password" "finePrint finePrint" "button button" "login login";
   justify-items: stretch;
 }
 
 .form__heading {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: heading;
@@ -78,7 +87,7 @@ a:hover {
 }
 
 .form__subheading {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: subheading;
@@ -88,7 +97,7 @@ a:hover {
 }
 
 .form__firstName {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: firstName;
   margin: 0.5rem 1rem 0.5rem 20rem;
@@ -97,7 +106,7 @@ a:hover {
 }
 
 .form__lastName {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 2;
   grid-area: lastName;
   margin: 0.5rem 20rem 0.5rem 1rem;
@@ -106,7 +115,7 @@ a:hover {
 }
 
 .form__email {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: email;
@@ -116,7 +125,7 @@ a:hover {
 }
 
 .form__password {
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: password;
@@ -126,7 +135,7 @@ a:hover {
 }
 
 .form__finePrint {
-  -ms-grid-row: 6;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: finePrint;
@@ -135,8 +144,13 @@ a:hover {
   margin: 0.5rem 20rem;
 }
 
+.form__terms, .form__privacy {
+  color: #000 !important;
+  font-weight: bold;
+}
+
 .form__signUp-btn {
-  -ms-grid-row: 7;
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: button;
@@ -147,12 +161,17 @@ a:hover {
 }
 
 .form__login-text {
-  -ms-grid-row: 8;
+  -ms-grid-row: 9;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: login;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+.form__login-link {
+  color: #000 !important;
+  font-weight: bold;
 }
 
 .form ::-webkit-input-placeholder {
@@ -184,11 +203,12 @@ a:hover {
 }
 
 .footer {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: footer;
   margin: 0 15rem;
   font-size: 0.8rem;
+  color: #fff;
 }
 
 .footer__links {
